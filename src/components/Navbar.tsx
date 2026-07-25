@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Moon, Sun } from 'lucide-react';
+import { Menu, X, Moon, Sun, Code2 } from 'lucide-react';
 import Link from 'next/link';
 
 // Moved outside component to prevent recreation on every render
@@ -67,9 +67,16 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between">
 
-          {/* Logo */}
-          <a href="#home" className="text-2xl font-bold text-[#16A34A] dark:text-white tracking-tight font-['Space_Grotesk',sans-serif]">
-            Maliha<span className="text-slate-800 dark:text-[#16A34A]">.</span>
+          {/* Attractive Logo */}
+          <a href="#home" className="group flex items-center gap-2.5 text-2xl font-bold tracking-tight font-['Space_Grotesk',sans-serif]">
+            <div className="relative flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-tr from-[#16A34A] via-[#F59E0B] to-[#0891B2] p-[2px] shadow-lg shadow-[#16A34A]/20 transition-transform duration-300 group-hover:scale-105">
+              <div className="w-full h-full bg-white dark:bg-[#0B1220] rounded-[10px] flex items-center justify-center transition-colors">
+                <Code2 size={20} className="text-[#16A34A] dark:text-[#F59E0B] transition-transform duration-300 group-hover:rotate-12" />
+              </div>
+            </div>
+            <span className="bg-gradient-to-r from-slate-900 via-[#16A34A] to-slate-800 dark:from-white dark:via-[#16A34A] dark:to-[#0891B2] bg-clip-text text-transparent transition-all">
+              Maliha<span className="text-[#16A34A] dark:text-[#F59E0B] group-hover:animate-pulse">.</span>
+            </span>
           </a>
 
           {/* Desktop Navigation */}
