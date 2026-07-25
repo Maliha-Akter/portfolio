@@ -40,7 +40,7 @@ const projectsData: Project[] = [
   {
     title: "ScholarAI",
     description: "Developed an AI-powered scholarship platform featuring intelligent recommendations, an AI chatbot, application tracking, and secure authentication.",
-    image: "/scholarai.png",
+    image: "/scholarAI.png",
     techStack: ["Next.js", "TypeScript", "Express.js", "MongoDB", "Groq LLM"],
     liveUrl: "https://scholarai-pi.vercel.app/",
     githubUrl: "https://github.com/Maliha-Akter/scholarai",
