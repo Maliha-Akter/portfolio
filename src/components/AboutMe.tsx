@@ -1,6 +1,6 @@
 "use client";
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { ReactNode } from 'react';
+import { motion, Variants } from 'framer-motion';
 import {
     User,
     BadgeCheck,
@@ -15,12 +15,22 @@ import {
     BookOpen,
     Camera,
     MapPinned,
-    Lightbulb
+    Lightbulb,
+    LucideIcon
 } from 'lucide-react';
 
+// 1. Define types for BentoCard props
+interface BentoCardProps {
+    children: ReactNode;
+    className?: string;
+    delay?: number;
+    slideIn?: "up" | "left" | "right" | "none";
+}
+
 // Reusable Card Wrapper for consistent styling and hover effects
-const BentoCard = ({ children, className = "", delay = 0, slideIn = "up" }) => {
-    const variants = {
+const BentoCard = ({ children, className = "", delay = 0, slideIn = "up" }: BentoCardProps) => {
+    // 2. Explicitly type the variants using Framer Motion's 'Variants' type
+    const variants: Variants = {
         hidden: {
             opacity: 0,
             y: slideIn === "up" ? 40 : 0,
@@ -47,8 +57,14 @@ const BentoCard = ({ children, className = "", delay = 0, slideIn = "up" }) => {
     );
 };
 
+// 3. Define types for CardHeader props
+interface CardHeaderProps {
+    icon: LucideIcon;
+    title: string;
+}
+
 // Reusable Header for each Bento Box
-const CardHeader = ({ icon: Icon, title }) => (
+const CardHeader = ({ icon: Icon, title }: CardHeaderProps) => (
     <div className="flex items-center gap-3 mb-6">
         <div className="p-2 bg-green-100 dark:bg-[#16A34A]/10 rounded-full text-[#16A34A] group-hover:scale-110 transition-transform duration-300">
             <Icon size={24} />
@@ -60,7 +76,6 @@ const CardHeader = ({ icon: Icon, title }) => (
 const AboutMe = () => {
     return (
         <section id="about" className="py-24 bg-gradient-to-r from-green-100 to-white dark:from-[#0B1220] dark:to-[#0B1220] transition-colors duration-300 relative overflow-hidden">
-            {/* UPDATED: Applied Green-to-White Light Gradient & Solid Dark Background */}
             <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
 
                 {/* Section Header */}
