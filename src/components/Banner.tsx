@@ -158,17 +158,20 @@ const Banner = () => {
 
           {/* Right Side: Image/Illustration */}
           <div className="relative flex justify-center lg:justify-end order-1 lg:order-2 mb-8 lg:mb-0">
-            <div className="relative w-64 h-64 sm:w-72 sm:h-72 lg:w-96 lg:h-96">
-              {/* Subtle Emerald/Cyan Glow behind image */}
-              <div className="absolute inset-0 bg-gradient-to-tr from-[#16A34A] to-[#0891B2] rounded-2xl opacity-10 blur-xl"></div>
+            <div className="relative w-64 h-64 sm:w-72 sm:h-72 lg:w-96 lg:h-96 group">
+              {/* Back Glow Effect */}
+              <div className="absolute inset-0 bg-gradient-to-tr from-[#16A34A] via-[#F59E0B] to-[#0891B2] rounded-2xl opacity-20 group-hover:opacity-40 blur-2xl transition-opacity duration-500"></div>
               
-              {/* Image container */}
-              <div className="absolute inset-0 bg-slate-50 dark:bg-[#162032] border border-slate-200 dark:border-[#2B3A55] rounded-2xl transition-colors duration-300 overflow-hidden shadow-xl z-10">
-                <img 
-                  src="https://i.ibb.co.com/93d5L3Yq/edited-removebg-preview.png" 
-                  alt="Maliha Akter Miti" 
-                  className="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity"
-                />
+              {/* Glamorous Border Wrapper */}
+              <div className="absolute inset-0 p-[3px] bg-gradient-to-tr from-[#16A34A] via-[#F59E0B] to-[#0891B2] rounded-2xl z-10 shadow-2xl transition-transform duration-500 group-hover:-translate-y-2">
+                {/* Inner Image Container */}
+                <div className="w-full h-full bg-slate-50 dark:bg-[#162032] rounded-xl overflow-hidden relative">
+                  <img 
+                    src="https://i.ibb.co.com/93d5L3Yq/edited-removebg-preview.png" 
+                    alt="Maliha Akter Miti" 
+                    className="w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
+                  />
+                </div>
               </div>
             </div>
           </div>
