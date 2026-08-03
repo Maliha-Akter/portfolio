@@ -124,7 +124,8 @@ const Banner = () => {
             {/* Call to Action Buttons */}
             <div className="flex flex-col sm:flex-row flex-wrap gap-4 pt-2 font-['Manrope',sans-serif]">
               <Link
-                href="/" // Updated link as requested
+                href="/Maliha_Akter_Miti_Resume.pdf"
+                download
                 className="flex justify-center items-center gap-2 px-6 py-3.5 sm:py-3 bg-[#16A34A] text-white hover:bg-[#15803d] dark:bg-[#F59E0B] dark:hover:bg-[#D97706] dark:text-[#0B1220] rounded-2xl font-bold transition-all hover:-translate-y-1 shadow-lg shadow-[#16A34A]/20 dark:shadow-[#F59E0B]/10 w-full sm:w-auto"
               >
                 <Download size={20} />

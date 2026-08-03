@@ -116,7 +116,8 @@ const Navbar = () => {
               </button>
 
               <Link
-                href="/"
+                href="/Maliha_Akter_Miti_Resume.pdf"
+                // download
                 className="px-5 py-2 bg-slate-50 dark:bg-[#162032] border border-[#16A34A] dark:border-[#2B3A55] text-[#16A34A] dark:text-white hover:bg-[#16A34A] hover:text-white dark:hover:border-[#16A34A] dark:hover:text-white transition-all rounded-2xl text-sm font-medium font-['Manrope',sans-serif] hover:-translate-y-0.5"
               >
                 Resume
@@ -166,7 +167,7 @@ const Navbar = () => {
             
             <div className="pt-4 border-t border-slate-200 dark:border-[#2B3A55] flex items-center justify-between">
               <Link
-                href="/"
+                href="/Maliha_Akter_Miti_Resume.pdf"
                 className="w-full text-center px-5 py-3 bg-[#16A34A] text-white rounded-2xl font-medium hover:bg-[#15803d] transition-colors"
               >
                 Resume
